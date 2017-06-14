@@ -1,0 +1,18 @@
+package routines;
+
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
+
+
+public class TwitterUtils{
+
+	public static TwitterFactory getTwitterFactory(String consumerKey, String consumerSecret, String accessToken, String accessTokenString){
+		ConfigurationBuilder cb = new ConfigurationBuilder();
+		cb.setDebugEnabled(true)
+		  .setOAuthConsumerKey(consumerKey)
+		  .setOAuthConsumerSecret(consumerSecret)
+		  .setOAuthAccessToken(accessToken)
+		  .setOAuthAccessTokenSecret(accessTokenString);
+		return new TwitterFactory(cb.build());
+	}
+}

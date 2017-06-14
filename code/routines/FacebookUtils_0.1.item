@@ -1,0 +1,30 @@
+package routines;
+
+import facebook4j.conf.Configuration;
+import facebook4j.conf.ConfigurationBuilder;
+import facebook4j.FacebookFactory;
+
+
+public class FacebookUtils{
+
+	public static FacebookFactory getFacebookFactory(String oAuthAppId, String oAuthAppSecret, String oAuthAccessToken){
+		ConfigurationBuilder confBuilder = new ConfigurationBuilder(); 
+		confBuilder.setDebugEnabled(true); 
+		
+		// Set application id, secret key and access token 
+		confBuilder.setOAuthAppId(oAuthAppId); 
+		confBuilder.setOAuthAppSecret(oAuthAppSecret); 
+		confBuilder.setOAuthAccessToken(oAuthAccessToken); 
+
+		// Set permission 
+		confBuilder.setOAuthPermissions("email,publish_stream, id, name, first_name, last_name, generic"); 
+		confBuilder.setUseSSL(true); 
+		confBuilder.setJSONStoreEnabled(true); 
+
+		// Create configuration object 
+		Configuration configuration = confBuilder.build(); 
+
+		// Create facebook instance 
+		return new FacebookFactory(configuration);
+	}
+}

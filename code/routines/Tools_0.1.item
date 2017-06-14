@@ -1,0 +1,55 @@
+package routines;
+
+import java.util.Date;
+
+
+public class Tools {
+
+		/**
+		 * isEmpty: is the string null, blank, or all whitespace.
+		 * 
+		 * {talendTypes} boolean
+		 * 
+		 * {Category} Tools
+		 * 
+		 * {param} string(mystring) string_to_check: The string to check for null,
+		 * blank, whitespace.
+		 * 
+		 * {example} if (isEmpty(MyString))
+		 */
+		public static boolean isEmpty(String string_to_check) {
+			if (string_to_check == null || string_to_check.trim().length() == 0)
+				return true;
+			else
+				return false;
+		}
+		
+		/**
+		 * StringToDate: Parses a date string and returns it as a Date. Returns null if format cannot be deciphered.
+		 * @param dtstring
+		 * @return a Date object
+		 * {talendTypes} Date
+		 * {Category} Tools
+		 * {param} String
+		 */
+	    public static Date StringToDate(String dtstring) {
+	    	Date outDate = null;
+	    	String[] format = {
+	    			"MMddyy",
+	    			"MMddyyyy",
+	    			"yyyyMMdd",
+	    			"yyMMdd"
+	    	};
+
+	    	if (dtstring!=null) {
+		    	for (int i=0; i<format.length; i++) {
+		    		if (TalendDate.isDate(dtstring, format[i])) {
+		        		outDate = TalendDate.parseDate(format[i], dtstring);
+		        		break;
+		        	}
+		    	}
+	    	}
+	    	return outDate;
+	    }
+
+}

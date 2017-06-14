@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_nvAVAEk0EeaAgd_dbNGDYA" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_nvAVAUk0EeaAgd_dbNGDYA" comment="" name="twitterConsumerKey" prompt="twitterConsumerKey?" promptNeeded="false" type="id_String" value="uiCXX9lKInd4y6CeWdYT6RdW1"/>
+  <contextParameter xmi:id="_nvAVAkk0EeaAgd_dbNGDYA" comment="" name="twitterConsumerSecret" prompt="twitterConsumerSecret?" promptNeeded="false" type="id_Password" value="XdH9JAyCY3tGGL0yWJSqokiM3Rg2J9LLCSNd9i0WMHeUinnvlCnDOCQJY0mXD+zLBaSAUoF2mRI="/>
+  <contextParameter xmi:id="_nvA8EEk0EeaAgd_dbNGDYA" comment="" name="twitterAccessToken" prompt="twitterAccessToken?" promptNeeded="false" type="id_String" value="743334186-IeuGnD7dyR2Prd2vdA89kJvKLTSleoXQ9GVPcHuN"/>
+  <contextParameter xmi:id="_nvA8EUk0EeaAgd_dbNGDYA" comment="" name="twitterAccessTokenSecret" prompt="twitterAccessTokenSecret?" promptNeeded="false" type="id_Password" value="tYNQRZ4BgzEuUROIbaFbXHdrF06PlFyd6eIuY9Us+Fo6tkfwHxQjFYRRpz0KLbpF"/>
+</talendfile:ContextType>
