@@ -112,7 +112,7 @@
     <routinesParameter id="_t2U0sECFEeaO_KqlSRwbvw" name="TalendDate"/>
     <routinesParameter id="_t2Wp4ECFEeaO_KqlSRwbvw" name="TalendString"/>
   </parameters>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_1" show="false"/>
     <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
     <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
