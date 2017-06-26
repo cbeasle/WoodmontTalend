@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_nuv2UEk0EeaAgd_dbNGDYA" name="Default">
-  <contextParameter xmi:id="_nuv2UUk0EeaAgd_dbNGDYA" comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" type="id_String" value="smtp.mail.me.com"/>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_nuv2UEk0EeaAgd_dbNGDYA" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_nuv2UUk0EeaAgd_dbNGDYA" comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" type="id_String" value="email-smtp.us-east-1.amazonaws.com"/>
   <contextParameter xmi:id="_nuv2Ukk0EeaAgd_dbNGDYA" comment="" name="smtpPort" prompt="smtpPort?" promptNeeded="false" type="id_String" value="587"/>
-  <contextParameter xmi:id="_nuv2U0k0EeaAgd_dbNGDYA" comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" type="id_String" value="whcav@icloud.com"/>
-  <contextParameter xmi:id="_nuv2VEk0EeaAgd_dbNGDYA" comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" type="id_Password" value="3710Franklin"/>
+  <contextParameter xmi:id="_nuv2U0k0EeaAgd_dbNGDYA" comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" type="id_String" value="AKIAIXOCWKO53CHYSHZQ"/>
+  <contextParameter xmi:id="_nuv2VEk0EeaAgd_dbNGDYA" comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" type="id_Password" value="oU1cVFVm2EML8ZPVPNMtMXQnFzdTg6jmVzlwdphJy8tqNo+rS1aJgk27XVUg+MDg"/>
 </talendfile:ContextType>

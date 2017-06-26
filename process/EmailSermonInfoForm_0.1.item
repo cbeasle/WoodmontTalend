@@ -4,10 +4,10 @@
     <contextParameter comment="" name="emailRecipients" prompt="emailRecipients?" promptNeeded="false" type="id_String" value="jbrown@woodmont.org,asteele@woodmont.org,Earl.Lavender@lipscomb.edu,rob.mcray@gmail.com"/>
     <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="whcav@icloud.com"/>
     <contextParameter comment="" name="emailCCRecipients" prompt="emailCCRecipients?" promptNeeded="false" type="id_String" value="chris.thebeaz.beasley@gmail.com,jsullivan@woodmont.org"/>
-    <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="smtp.mail.me.com"/>
-    <contextParameter comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_Password" value="AbJyg9kFF4gEL4Qy6m1iUg=="/>
+    <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="email-smtp.us-east-1.amazonaws.com"/>
+    <contextParameter comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_Password" value="oU1cVFVm2EML8ZPVPNMtMXQnFzdTg6jmVzlwdphJy8tqNo+rS1aJgk27XVUg+MDg"/>
     <contextParameter comment="" name="smtpPort" prompt="smtpPort?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="587"/>
-    <contextParameter comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="whcav@icloud.com"/>
+    <contextParameter comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="AKIAIXOCWKO53CHYSHZQ"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

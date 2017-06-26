@@ -10,10 +10,10 @@
     <contextParameter comment="Hashed Id for Current Sermon Series project" name="wistiaCurrentProjectId" prompt="wistiaCurrentProjectId?" promptNeeded="false" type="id_String" value="jz3i781xfz"/>
     <contextParameter comment="" name="emailRecipients" prompt="emailRecipients?" promptNeeded="false" type="id_String" value="chris.thebeaz.beasley@gmail.com"/>
     <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="whcav@icloud.com"/>
-    <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="smtp.mail.me.com"/>
+    <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="email-smtp.us-east-1.amazonaws.com"/>
     <contextParameter comment="" name="smtpPort" prompt="smtpPort?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="587"/>
-    <contextParameter comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="whcav@icloud.com"/>
-    <contextParameter comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_Password" value="AbJyg9kFF4gEL4Qy6m1iUg=="/>
+    <contextParameter comment="" name="smtpUsername" prompt="smtpUsername?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="AKIAIXOCWKO53CHYSHZQ"/>
+    <contextParameter comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_Password" value="oU1cVFVm2EML8ZPVPNMtMXQnFzdTg6jmVzlwdphJy8tqNo+rS1aJgk27XVUg+MDg"/>
     <contextParameter comment="" name="twitterConsumerKey" prompt="twitterConsumerKey?" promptNeeded="false" repositoryContextId="_1SsZcEMTEeaUSsVHy9CoDA" type="id_String" value="uiCXX9lKInd4y6CeWdYT6RdW1"/>
     <contextParameter comment="" name="twitterConsumerSecret" prompt="twitterConsumerSecret?" promptNeeded="false" repositoryContextId="_1SsZcEMTEeaUSsVHy9CoDA" type="id_Password" value="XdH9JAyCY3tGGL0yWJSqokiM3Rg2J9LLCSNd9i0WMHeUinnvlCnDOCQJY0mXD+zLBaSAUoF2mRI="/>
     <contextParameter comment="" name="twitterAccessToken" prompt="twitterAccessToken?" promptNeeded="false" repositoryContextId="_1SsZcEMTEeaUSsVHy9CoDA" type="id_String" value="743334186-IeuGnD7dyR2Prd2vdA89kJvKLTSleoXQ9GVPcHuN"/>
@@ -1248,15 +1248,15 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="notExists2" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_3" target="tDie_2">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="notExists2" show="false"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="exists" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_3" target="tSetGlobalVar_3">
+  <connection connectorName="RUN_IF" label="exists" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_3" target="tSetGlobalVar_3">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="exists" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="notExists2" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_3" target="tDie_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="notExists2" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="responseExists" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFixedFlowInput_6">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.containsKey(&quot;wisitaUploadResponse&quot;) &amp;&amp; !Tools.isEmpty( (String)globalMap.get(&quot;wisitaUploadResponse&quot;) )"/>
@@ -1365,7 +1365,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
