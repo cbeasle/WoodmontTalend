@@ -4,6 +4,10 @@
     <contextParameter comment="" name="videoFilePath" prompt="videoFilePath?" promptNeeded="false" type="id_String" value="/Users/whc_streaming/Desktop/RecordedServices/"/>
     <contextParameter comment="" name="jobWorkspacePath" prompt="jobWorkspacePath?" promptNeeded="false" type="id_String" value="/opt/talend/jobWorkspace/"/>
     <contextParameter comment="" name="wistiaUploadUrl" prompt="wistiaUploadUrl?" promptNeeded="false" type="id_String" value="https://upload.wistia.com"/>
+    <contextParameter comment="" name="wistialCopyUrl" prompt="wistialCopyUrl?" promptNeeded="false" type="id_String" value="https://api.wistia.com/v1/medias/HASHEDID/copy.json"/>
+    <contextParameter comment="" name="wistiaAPIPassword" prompt="wistiaAPIPassword?" promptNeeded="false" type="id_Password" value="XLJdUw0n/DFq78RJ9LzmAgEwcaoUfQklb+7++Mk6AVVNKaVHGOm24IlXPI8J+Z9K4rq1R1JP3WJeYbK8PWLFnvzmwYq26buu"/>
+    <contextParameter comment="Hashed Id for Woodmont Hills Video Podcast project" name="wistiaProjectId" prompt="wistiaProjectId?" promptNeeded="false" type="id_String" value="ajxszlmamt"/>
+    <contextParameter comment="Hashed Id for Current Sermon Series project" name="wistiaCurrentProjectId" prompt="wistiaCurrentProjectId?" promptNeeded="false" type="id_String" value="jz3i781xfz"/>
     <contextParameter comment="" name="emailRecipients" prompt="emailRecipients?" promptNeeded="false" type="id_String" value="chris.thebeaz.beasley@gmail.com"/>
     <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="whcav@icloud.com"/>
     <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="email-smtp.us-east-1.amazonaws.com"/>
@@ -20,11 +24,6 @@
     <contextParameter comment="" name="bufferFBProfileId" prompt="bufferFBProfileId?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="5781239453eca54c2387209f"/>
     <contextParameter comment="" name="bufferToken" prompt="bufferToken?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="1/e53abeb7a990aefaacd312fa143ff65e"/>
     <contextParameter comment="" name="bufferUrl" prompt="bufferUrl?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="https://api.bufferapp.com/1/updates/create.json?access_token="/>
-    <contextParameter comment="" name="vimeoWHChnnelName" prompt="vimeoWHChnnelName?" promptNeeded="false" type="id_String" value="Woodmont Hills Church Video Archive"/>
-    <contextParameter comment="" name="vimeoApiRoot" prompt="vimeoApiRoot?" promptNeeded="false" type="id_String" value="https://api.vimeo.com"/>
-    <contextParameter comment="" name="vimeoReadToken" prompt="vimeoReadToken?" promptNeeded="false" type="id_String" value="94ca7078c6fa14dade1134e93e36f9f0"/>
-    <contextParameter comment="" name="vimeoWriteToken" prompt="vimeoWriteToken?" promptNeeded="false" type="id_String" value="5d3064c48cafb5f05bd9700f06d38c8b"/>
-    <contextParameter comment="" name="vimeoAcceptHeader" prompt="vimeoAcceptHeader?" promptNeeded="false" type="id_String" value="application/vnd.vimeo.*+json;version=3.2"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx10024M&quot;,&quot;-XX:MaxNewSize=512M&quot;]}" show="false"/>
@@ -122,15 +121,15 @@
     <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
-    <routinesParameter id="_t1598ECFEeaO_KqlSRwbvw" name="DataOperation"/>
-    <routinesParameter id="_t2LDsECFEeaO_KqlSRwbvw" name="Mathematical"/>
-    <routinesParameter id="_t2M44ECFEeaO_KqlSRwbvw" name="Numeric"/>
-    <routinesParameter id="_t2OuEECFEeaO_KqlSRwbvw" name="Relational"/>
-    <routinesParameter id="_t2QjQECFEeaO_KqlSRwbvw" name="StringHandling"/>
-    <routinesParameter id="_t2S_gECFEeaO_KqlSRwbvw" name="TalendDataGenerator"/>
-    <routinesParameter id="_t2U0sECFEeaO_KqlSRwbvw" name="TalendDate"/>
-    <routinesParameter id="_t2Wp4ECFEeaO_KqlSRwbvw" name="TalendString"/>
-    <routinesParameter id="_xnsYUF2MEeeU5Kvghke4qQ" name="TalendStringUtil"/>
+    <routinesParameter id="_Oo_PMD_mEeaKv6ZhswKsqw" name="DataOperation"/>
+    <routinesParameter id="_OpZe4D_mEeaKv6ZhswKsqw" name="Mathematical"/>
+    <routinesParameter id="_Opb7ID_mEeaKv6ZhswKsqw" name="Numeric"/>
+    <routinesParameter id="_Ope-cD_mEeaKv6ZhswKsqw" name="Relational"/>
+    <routinesParameter id="_OphasD_mEeaKv6ZhswKsqw" name="StringHandling"/>
+    <routinesParameter id="_OpkeAD_mEeaKv6ZhswKsqw" name="TalendDataGenerator"/>
+    <routinesParameter id="_Opm6QD_mEeaKv6ZhswKsqw" name="TalendDate"/>
+    <routinesParameter id="_Opp9kD_mEeaKv6ZhswKsqw" name="TalendString"/>
+    <routinesParameter id="_XLrccD_7EeaKv6ZhswKsqw" name="Utils"/>
     <routinesParameter id="_XLrccD_7EeaKv6ZhswKsqw" name="Tools"/>
     <routinesParameter id="_qjBl4EIPEeaGScqV7tWoMg" name="TwitterUtils"/>
   </parameters>
@@ -175,7 +174,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileFetch_1"/>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="928">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.jobWorkspacePath  + jobName + &quot;/woodmont_weekly_sermon_info.csv&quot;"/>
@@ -261,7 +260,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="928">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
@@ -297,7 +296,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="928">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;output_row.service_name = input_row.service_name;&#xA;output_row.name = input_row.sermon_title;&#xA;output_row.description = &quot;&lt;p>&quot; + (Tools.isEmpty(input_row.sermon_series) ? &quot;&quot; : input_row.sermon_series + &quot; | &quot;) + input_row.speaker_name + &quot;&lt;/p>&lt;p>&quot; + input_row.description.replaceAll(&quot;\n&quot;,&quot;&lt;/p>&lt;p>&quot;) + &quot;&lt;/p>&quot;;&#xA;globalMap.put(&quot;raw_description&quot;, input_row.description);&#xA;globalMap.put(&quot;raw_sermon_series&quot;, input_row.sermon_series);&#xA;&#xA;DateFormat dateFormat = new SimpleDateFormat(&quot;MMddyy&quot;);&#xA;String datePart = dateFormat.format(input_row.service_date); &#xA;String timePart = &quot;Second Service&quot;.equals(input_row.service_name) ? &quot;2&quot; : &quot;1&quot;;&#xA;String fileName= datePart + &quot;_&quot; + timePart + &quot;.mp4&quot;;&#xA;&#xA;output_row.file_name = fileName;&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.commons.io.FileUtils;&#xA;import java.io.File;&#xA;import java.text.DateFormat;&#xA;import java.text.SimpleDateFormat;"/>
@@ -310,24 +309,32 @@
       <column comment="" key="false" length="-1" name="file_name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="928">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="928">
+  <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_2" show="false"/>
     <elementParameter field="FILE" name="FILE_NAME" value="context.videoFilePath  + (String)globalMap.get(&quot;vid.file_name&quot;) "/>
     <elementParameter field="TEXT" name="LABEL" value="checkFileName"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="1024">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_3" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="api_password"/>
+      <elementValue elementRef="VALUE" value="context.wistiaAPIPassword"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="project_id"/>
+      <elementValue elementRef="VALUE" value="context.wistiaProjectId"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;vid.name&quot;)"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="description"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;vid.description&quot;)"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="file_name"/>
       <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;vid.file_name&quot;)"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="file"/>
@@ -341,13 +348,17 @@
     <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_3">
+      <column comment="" key="false" length="-1" name="api_password" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="project_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="description" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="file_name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="file" nullable="false" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="1024">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value=" &#xA;MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addBinaryBody(&quot;file_data&quot;, (byte[])input_row.file, ContentType.create(&quot;application/octet-stream&quot;), input_row.file_name);&#xA;&#xA;System.out.println(&quot;Uploading to: &quot; + (String)globalMap.get(&quot;upload_url&quot;));&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost((String)globalMap.get(&quot;upload_url&quot;));&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;&#xA;globalMap.put(&quot;vimeoUploadResponse&quot;,output_row.response);&#xA;System.out.println(&quot;Upload Response:\n&quot; + output_row.response);&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value=" &#xA;MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addTextBody(&quot;api_password&quot;, input_row.api_password);&#xA;builder.addTextBody(&quot;project_id&quot;, input_row.project_id);&#xA;builder.addTextBody(&quot;name&quot;, input_row.name);&#xA;builder.addTextBody(&quot;description&quot;, input_row.description);&#xA;builder.addBinaryBody(&quot;file&quot;, (byte[])input_row.file, ContentType.create(&quot;application/octet-stream&quot;), input_row.file_name);&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost(context.wistiaUploadUrl);&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;&#xA;globalMap.put(&quot;wisitaUploadResponse&quot;,output_row.response);&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.HttpEntity;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.methods.HttpPost;&#xA;import org.apache.http.entity.ContentType;&#xA;import org.apache.http.entity.mime.MultipartEntityBuilder;&#xA;import org.apache.http.impl.client.DefaultHttpClient;&#xA;&#xA;import java.io.InputStreamReader;&#xA;import java.io.BufferedReader;&#xA;&#xA;"/>
     <elementParameter field="TEXT" name="LABEL" value="uploadVideo"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -356,7 +367,7 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="1024">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -364,7 +375,6 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -391,7 +401,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="1120">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Error uploading video '&quot; + (String)globalMap.get(vid.name) + &quot;'\n\n&quot; + failure.response"/>
     <elementParameter field="TEXT" name="CODE" value="failure.response_code"/>
@@ -403,7 +413,7 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="1024">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_2" show="false"/>
     <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
     <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
@@ -489,10 +499,10 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="writeSuccess"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
       <column comment="" key="false" length="-1" name="last_success" nullable="false" pattern="&quot;MM/dd/yyyy HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -598,7 +608,6 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -721,9 +730,8 @@
       <column comment="" key="false" length="-1" name="last_success" nullable="true" pattern="&quot;MM/dd/yyyy HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1344">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -742,9 +750,8 @@
       <column comment="" key="false" length="-1" name="success" nullable="false" pattern="&quot;MM/dd/yyyy HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1344">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.jobWorkspacePath  + jobName + &quot;/last_success.csv&quot;"/>
@@ -770,10 +777,10 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="writeSuccess"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
       <column comment="" key="false" length="-1" name="success" nullable="false" pattern="&quot;MM/dd/yyyy HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -806,7 +813,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_3"/>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="928">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_3" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;File Not Found: &quot; + ((String)globalMap.get(&quot;tFileExist_2_FILENAME&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="4"/>
@@ -815,18 +822,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_3"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1472">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="checkResponse"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1472">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_6" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -845,9 +850,8 @@
       <column comment="" key="false" length="-1" name="response" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="5" offsetLabelY="0" posX="512" posY="1472">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="5" offsetLabelY="0" posX="512" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="response"/>
     <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/&quot;"/>
@@ -911,17 +915,15 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1472">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_2"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1472">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_4" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -945,9 +947,8 @@
       <column comment="" key="false" length="-1" name="hashed_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1472">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="URIBuilder uriBuilder = new URIBuilder(context.wistialCopyUrl.replace(&quot;HASHEDID&quot;, input_row.hashed_id));&#xA;uriBuilder.addParameter(&quot;api_password&quot;, input_row.api_password);&#xA;uriBuilder.addParameter(&quot;project_id&quot;, input_row.project_id);&#xA;HttpPost httpPost2 = new HttpPost(uriBuilder.build());&#xA;&#xA;DefaultHttpClient client2 = new DefaultHttpClient();&#xA;HttpResponse response2 = client2.execute(httpPost2);&#xA;&#xA;BufferedReader rd2 = new BufferedReader(new InputStreamReader(response2.getEntity().getContent()));&#xA;StringBuffer result2 = new StringBuffer();&#xA;String line2 = &quot;&quot;;&#xA;while ((line2 = rd2.readLine()) != null) {&#xA;&#x9;result2.append(line2);&#xA;}&#xA;&#xA;output_row.response = result2.toString();&#xA;output_row.response_code = response2.getStatusLine().getStatusCode();&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.client.utils.URIBuilder;&#xA;&#xA;&#xA;"/>
     <elementParameter field="TEXT" name="LABEL" value="copyVideo"/>
@@ -957,9 +958,8 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="1472">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_3" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
     <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -992,9 +992,8 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1568">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="960">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_5" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -1015,9 +1014,8 @@
       <column comment="" key="false" length="-1" name="thumbNailUrl" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1568">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="960">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_5" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value=" &#xA;MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addTextBody(&quot;text&quot;, &quot;Our latest sermon '&quot; + input_row.name + &quot;' is now available.&quot;);&#xA;builder.addTextBody(&quot;profile_ids[]&quot;, context.bufferTwitterProfileId);&#xA;builder.addTextBody(&quot;media[link]&quot;, context.woodmontVideoArchiveUrl);&#xA;builder.addTextBody(&quot;media[description]&quot;, context.woodmontVideoArchiveDescription);&#xA;builder.addTextBody(&quot;media[photo]&quot;, input_row.thumbNailUrl.replace(&quot;200x120&quot;,&quot;600x400&quot;));&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost(context.bufferUrl + context.bufferToken);&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;&#xA;globalMap.put(&quot;wisitaUploadResponse&quot;,output_row.response);&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.HttpEntity;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.methods.HttpPost;&#xA;import org.apache.http.entity.ContentType;&#xA;import org.apache.http.entity.mime.MultipartEntityBuilder;&#xA;import org.apache.http.impl.client.DefaultHttpClient;&#xA;&#xA;import java.io.InputStreamReader;&#xA;import java.io.BufferedReader;&#xA;&#xA;"/>
     <elementParameter field="TEXT" name="LABEL" value="bufferTwitter"/>
@@ -1027,9 +1025,8 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="1568">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="960">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_4" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
     <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -1062,9 +1059,8 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1664">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_7" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -1091,9 +1087,8 @@
       <column comment="" key="false" length="-1" name="sermonSeries" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1664">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_6" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addTextBody(&quot;text&quot;, &quot;We invite you to watch our latest sermon &quot; + ( (Tools.isEmpty(input_row.sermonSeries) ? &quot;&quot; : &quot;from the sermon series &quot; + input_row.sermonSeries) ) +&quot; now available in the &quot; + context.woodmontVideoArchiveDescription + &quot; entitled &quot; + input_row.name + (Tools.isEmpty(input_row.description) ? &quot;&quot; : &quot; - &quot; + input_row.description) );&#xA;builder.addTextBody(&quot;profile_ids[]&quot;, context.bufferFBProfileId);&#xA;builder.addTextBody(&quot;media[link]&quot;, context.woodmontVideoArchiveUrl);&#xA;builder.addTextBody(&quot;media[description]&quot;, context.woodmontVideoArchiveDescription);&#xA;builder.addTextBody(&quot;media[picture]&quot;, input_row.thumbNailUrl.replace(&quot;200x120&quot;,&quot;600x400&quot;));&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost(context.bufferUrl + context.bufferToken);&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;&#xA;globalMap.put(&quot;wisitaUploadResponse&quot;,output_row.response);&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.HttpEntity;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.methods.HttpPost;&#xA;import org.apache.http.entity.ContentType;&#xA;import org.apache.http.entity.mime.MultipartEntityBuilder;&#xA;import org.apache.http.impl.client.DefaultHttpClient;&#xA;&#xA;import java.io.InputStreamReader;&#xA;import java.io.BufferedReader;&#xA;&#xA;"/>
     <elementParameter field="TEXT" name="LABEL" value="bufferFB"/>
@@ -1103,9 +1098,8 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="1664">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_5" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
     <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -1138,7 +1132,7 @@
       <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="1568">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="960">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="Twitter twitter = TwitterUtils.getTwitterFactory(context.twitterConsumerKey, context.twitterConsumerSecret, context.twitterAccessToken, context.twitterAccessTokenSecret).getInstance();&#xA;&#xA;URL url = new URL(row9.thumbNailUrl.replace(&quot;200x120&quot;,&quot;600x400&quot;));&#xA;InputStream in = new BufferedInputStream(url.openStream());&#xA;&#xA;StatusUpdate statusUpdate = new StatusUpdate(&quot;View new sermon entitled '&quot; + row9.name + &quot;' now at &quot; + context.woodmontVideoArchiveUrl + &quot;.&quot;);&#xA;statusUpdate.setMedia(&quot;thumbnail&quot;, in);&#xA;Status status = twitter.updateStatus(statusUpdate);&#xA;&#xA;output_row.message = &quot;Successfully tweeted [&quot; + status.getText() + &quot;]&quot;;&#xA;&#xA;"/>
@@ -1149,286 +1143,14 @@
       <column comment="" key="false" length="-1" name="message" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tREST_1" show="false"/>
-    <elementParameter field="TEXT" name="URL" value="context.vimeoApiRoot + &quot;/me/channels&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.vimeoReadToken"/>
-      <elementValue elementRef="NAME" value="&quot;Accept&quot;"/>
-      <elementValue elementRef="VALUE" value="context.vimeoAcceptHeader"/>
-    </elementParameter>
-    <elementParameter field="MEMO" name="BODY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tREST_1">
-      <column key="false" length="0" name="Body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_4-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out2">
-      <column key="false" length="0" name="Body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="err1">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out2" expressionFilter="row15.ERROR_CODE == null" activateExpressionFilter="true">
-        <mapperTableEntries name="Body" expression="row15.Body " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="err1" expressionFilter="row15.ERROR_CODE != null" activateExpressionFilter="true">
-        <mapperTableEntries name="errorCode" expression="row15.ERROR_CODE " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="errorMessage" expression="row15.Body " type="id_String" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="Body" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ERROR_CODE" type="id_Integer" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_2" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="Body"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/data&quot;"/>
-    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.bills.bill.line[*]&quot;" show="false"/>
-    <elementParameter field="TABLE" name="MAPPING">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channelUri"/>
-      <elementValue elementRef="QUERY" value="&quot;uri&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="QUERY" value="&quot;name&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="ISARRAY" value="false"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channelUri"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="QUERY" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_1" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="TEXT" name="LABEL" value="extractChannelUri"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tExtractJSONFields_2">
-      <column comment="" key="false" length="-1" name="channelUri" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="channelUri" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_3-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
-      <column comment="" key="false" length="-1" name="channelUri" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out1" expressionFilter="context.vimeoWHChnnelName.equals(  row17.name )" activateExpressionFilter="true">
-        <mapperTableEntries name="channelUri" expression="row17.channelUri " type="id_String" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row17" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="channelUri" type="id_String" nullable="true"/>
-        <mapperTableEntries name="name" type="id_String" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_4" show="false"/>
-    <elementParameter field="TABLE" name="VARIABLES">
-      <elementValue elementRef="KEY" value="&quot;channelUri&quot;"/>
-      <elementValue elementRef="VALUE" value="out1.channelUri"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="saveChannelUri"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSetGlobalVar_4">
-      <column comment="" key="false" length="-1" name="channelUri" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="544">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_4" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="err1.errorMessage"/>
-    <elementParameter field="TEXT" name="CODE" value="err1.errorCode"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
-    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDie_4">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_5" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Could not find channel: &quot; + context.vimeoWHChnnelName"/>
-    <elementParameter field="TEXT" name="CODE" value="999"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
-    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDie_5">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="checkChannelUri"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_2"/>
-  </node>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tREST_2" show="false"/>
-    <elementParameter field="TEXT" name="URL" value="context.vimeoApiRoot + &quot;/me/videos&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;Bearer &quot; + context.vimeoWriteToken"/>
-      <elementValue elementRef="NAME" value="&quot;Accept&quot;"/>
-      <elementValue elementRef="VALUE" value="context.vimeoAcceptHeader"/>
-    </elementParameter>
-    <elementParameter field="MEMO" name="BODY" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tREST_2">
-      <column key="false" length="0" name="Body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_3" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="Body"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/&quot;"/>
-    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.bills.bill.line[*]&quot;" show="false"/>
-    <elementParameter field="TABLE" name="MAPPING">
-      <elementValue elementRef="SCHEMA_COLUMN" value="upload_url"/>
-      <elementValue elementRef="QUERY" value="&quot;upload_link_secure&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="ISARRAY" value="false"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="upload_url"/>
-      <elementValue elementRef="QUERY" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_1" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="TEXT" name="LABEL" value="extractUrl"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tExtractJSONFields_3">
-      <column comment="" key="false" length="-1" name="upload_url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="upload_url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_5-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out3">
-      <column key="false" length="0" name="upload_url" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="err2">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out3" expressionFilter="row18.upload_url != null" activateExpressionFilter="true">
-        <mapperTableEntries name="upload_url" expression="row18.upload_url " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="err2" expressionFilter="row18.upload_url == null&#xA;" activateExpressionFilter="true">
-        <mapperTableEntries name="errorCode" expression="row16.ERROR_CODE == null ? 999 : row16.ERROR_CODE " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="errorMessage" expression="&quot;Error getting upload URL.\n&quot; + row16.Body " type="id_String" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="upload_url" type="id_String" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="704">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_6" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="err2.errorMessage"/>
-    <elementParameter field="TEXT" name="CODE" value="err2.errorCode"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
-    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDie_6">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_5" show="false"/>
-    <elementParameter field="TABLE" name="VARIABLES">
-      <elementValue elementRef="KEY" value="&quot;upload_url&quot;"/>
-      <elementValue elementRef="VALUE" value="row18.upload_url"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSetGlobalVar_5">
-      <column key="false" length="0" name="upload_url" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tREST_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFilterRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFixedFlowInput_2">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
   </connection>
   <connection connectorName="FILTER" label="row5" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tJavaRow_1">
@@ -1471,9 +1193,6 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="api_password"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="upload_url"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -1526,31 +1245,27 @@
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tFileOutputDelimited_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tJava_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="notExists2" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_3" target="tDie_2">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="notExists2" show="false"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="exists" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_3" target="tSetGlobalVar_3">
+  <connection connectorName="RUN_IF" label="exists" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_3" target="tSetGlobalVar_3">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="exists" show="false"/>
   </connection>
+  <connection connectorName="RUN_IF" label="notExists2" lineStyle="6" metaname="tFileExist_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_3" target="tDie_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_3_EXISTS&quot;))"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="notExists2" show="false"/>
+  </connection>
   <connection connectorName="RUN_IF" label="responseExists" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFixedFlowInput_6">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.containsKey(&quot;wisitaUploadResponse&quot;) &amp;&amp; !Tools.isEmpty( (String)globalMap.get(&quot;wisitaUploadResponse&quot;) )"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="responseExists" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tFixedFlowInput_6" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_6" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="resp" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tFlowToIterate_2">
@@ -1560,25 +1275,21 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="resp" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFlowToIterate_2" target="tFixedFlowInput_4">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate5" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFlowToIterate_2" target="tFixedFlowInput_5">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tFlowToIterate_2" target="tFixedFlowInput_7">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate7" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tJavaRow_4">
@@ -1591,12 +1302,10 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tSendMail_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="tJavaRow_5">
@@ -1606,12 +1315,10 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tJavaRow_5" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_5" target="tSendMail_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tFixedFlowInput_7" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_7" target="tJavaRow_6">
@@ -1627,72 +1334,11 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tJavaRow_6" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_6" target="tSendMail_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tMap_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tJava_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_4" target="tExtractJSONFields_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out2" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="err1" lineStyle="0" metaname="err1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_4" target="tDie_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="err1" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tExtractJSONFields_2" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_2" target="tMap_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tSetGlobalVar_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="noChannelUri" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tDie_5">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.get(&quot;channelUri&quot;) == null"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="noChannelUri" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tREST_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tREST_2" offsetLabelX="0" offsetLabelY="0" source="tREST_2" target="tExtractJSONFields_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_2" offsetLabelX="0" offsetLabelY="0" source="tREST_2" target="tFileInputDelimited_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk9" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tExtractJSONFields_3" offsetLabelX="-2" offsetLabelY="2" source="tExtractJSONFields_3" target="tMap_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="out3" lineStyle="0" metaname="out3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_5" target="tSetGlobalVar_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="upload_url"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out3" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="err2" lineStyle="0" metaname="err2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_5" target="tDie_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="err2" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -1721,7 +1367,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -1787,30 +1433,6 @@
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tREST_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Get Archive Channel URI"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_5" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tREST_2" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Upload Video to Vimeo"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
 </talendfile:ProcessType>
