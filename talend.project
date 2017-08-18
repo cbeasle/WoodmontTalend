@@ -7,6 +7,8 @@
     <documentationStatus xmi:id="_t0eakECFEeaO_KqlSRwbvw" label="unchecked" code="UCK"/>
     <documentationStatus xmi:id="_t0eakUCFEeaO_KqlSRwbvw" label="checked" code="CHK"/>
     <documentationStatus xmi:id="_t0eakkCFEeaO_KqlSRwbvw" label="validated" code="VAL"/>
+    <componentsSettings xmi:id="_8p3msF4YEeeW9pLVjNnxaQ" name="DI|tHashInput" family="Technical"/>
+    <componentsSettings xmi:id="_8p3msV4YEeeW9pLVjNnxaQ" name="DI|tHashOutput" family="Technical"/>
     <statAndLogsSettings xmi:id="_vPp_IECFEeaO_KqlSRwbvw">
       <parameters xmi:id="_vPqmMECFEeaO_KqlSRwbvw">
         <elementParameter xmi:id="_vQJuYECFEeaO_KqlSRwbvw" field="CHECK" name="UPDATE_COMPONENTS" value="false" contextMode="false"/>
@@ -105,24 +107,7 @@
       <relatedItems xmi:id="_xtKHM12MEeeU5Kvghke4qQ" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_xtKHNF2MEeeU5Kvghke4qQ" id="Tools" version="Latest" type="routine"/>
       <relatedItems xmi:id="_xtKHNV2MEeeU5Kvghke4qQ" id="Mathematical" version="Latest" type="routine"/>
-    </ItemsRelations>
-    <ItemsRelations xmi:id="_xtKHNl2MEeeU5Kvghke4qQ">
-      <baseItem xmi:id="_xtKHN12MEeeU5Kvghke4qQ" id="_r_hEUD_mEeaKv6ZhswKsqw" version="0.1" type="job"/>
-      <relatedItems xmi:id="_xtKHOF2MEeeU5Kvghke4qQ" id="_1SsZcEMTEeaUSsVHy9CoDA" version="Latest" type="context"/>
-      <relatedItems xmi:id="_xtKHOV2MEeeU5Kvghke4qQ" id="_2p2fIEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
-      <relatedItems xmi:id="_xtKHOl2MEeeU5Kvghke4qQ" id="_1Ke3cEVqEeaoOIXf89Zmgg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_xtKHO12MEeeU5Kvghke4qQ" id="_x0cPYEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
-      <relatedItems xmi:id="_xtKHPF2MEeeU5Kvghke4qQ" id="Numeric" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHPV2MEeeU5Kvghke4qQ" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHP12MEeeU5Kvghke4qQ" id="DataOperation" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHQF2MEeeU5Kvghke4qQ" id="StringHandling" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHQV2MEeeU5Kvghke4qQ" id="TalendDataGenerator" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHQ12MEeeU5Kvghke4qQ" id="TalendDate" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHRF2MEeeU5Kvghke4qQ" id="Tools" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHRV2MEeeU5Kvghke4qQ" id="Mathematical" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_xtKHRl2MEeeU5Kvghke4qQ" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UecbIF2VEeeU5Kvghke4qQ" id="TalendStringUtil" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_RK77oF2YEeeXcoMuAFABeg" id="TwitterUtils" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_xn8dcILPEeeKy4Ccg_2oIA" id="TalendStringUtil" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_M4M8IF2NEeeU5Kvghke4qQ">
       <baseItem xmi:id="_M4M8IV2NEeeU5Kvghke4qQ" id="_M32W0F2NEeeU5Kvghke4qQ" version="0.1" type="job"/>
@@ -141,6 +126,25 @@
       <relatedItems xmi:id="_M4M8Ll2NEeeU5Kvghke4qQ" id="Tools" version="Latest" type="routine"/>
       <relatedItems xmi:id="_M4M8L12NEeeU5Kvghke4qQ" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_M4M8MF2NEeeU5Kvghke4qQ" id="Relational" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_QNmigF4NEeeW9pLVjNnxaQ">
+      <baseItem xmi:id="_QNmigV4NEeeW9pLVjNnxaQ" id="_r_hEUD_mEeaKv6ZhswKsqw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_QNmigl4NEeeW9pLVjNnxaQ" id="_1SsZcEMTEeaUSsVHy9CoDA" version="Latest" type="context"/>
+      <relatedItems xmi:id="_QNmig14NEeeW9pLVjNnxaQ" id="_2p2fIEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
+      <relatedItems xmi:id="_QNmihF4NEeeW9pLVjNnxaQ" id="_1Ke3cEVqEeaoOIXf89Zmgg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_QNmihV4NEeeW9pLVjNnxaQ" id="_x0cPYEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
+      <relatedItems xmi:id="_QNmihl4NEeeW9pLVjNnxaQ" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmih14NEeeW9pLVjNnxaQ" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmiiF4NEeeW9pLVjNnxaQ" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmiiV4NEeeW9pLVjNnxaQ" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmiil4NEeeW9pLVjNnxaQ" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmijF4NEeeW9pLVjNnxaQ" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmijl4NEeeW9pLVjNnxaQ" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmij14NEeeW9pLVjNnxaQ" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmikF4NEeeW9pLVjNnxaQ" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_QNmikV4NEeeW9pLVjNnxaQ" id="VimeoUtils" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9NqCsF44Eeeko_vzFfpTSg" id="TwitterUtils" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9NqCsV44Eeeko_vzFfpTSg" id="Tools" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_ty3RAECFEeaO_KqlSRwbvw" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ty3RAUCFEeaO_KqlSRwbvw" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

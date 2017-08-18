@@ -106,6 +106,7 @@
     <routinesParameter id="_Opm6QD_mEeaKv6ZhswKsqw" name="TalendDate"/>
     <routinesParameter id="_Opp9kD_mEeaKv6ZhswKsqw" name="TalendString"/>
     <routinesParameter id="_XLrccD_7EeaKv6ZhswKsqw" name="Tools"/>
+    <routinesParameter id="_xnsYUF2MEeeU5Kvghke4qQ" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
@@ -158,6 +159,10 @@
       <elementValue elementRef="FUNCTION" value="$source == null? false : $source.matches($target) $operator true"/>
       <elementValue elementRef="OPERATOR" value="!="/>
       <elementValue elementRef="RVALUE" value="&quot;[0-9]{6}_[1-2]\\.mp4&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="fileName"/>
+      <elementValue elementRef="FUNCTION" value="$source == null? false : $source.matches($target) $operator true"/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;.*\\_Sermon.*\\.mp4&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
@@ -207,9 +212,9 @@
     <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="row3"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="FAILON" value="true"/>
     <metadata connector="FLOW" name="tFileCopy_1">
       <column comment="" key="false" length="-1" name="fileName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="filePath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
