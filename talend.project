@@ -129,7 +129,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_QNmigF4NEeeW9pLVjNnxaQ">
       <baseItem xmi:id="_QNmigV4NEeeW9pLVjNnxaQ" id="_r_hEUD_mEeaKv6ZhswKsqw" version="0.1" type="job"/>
-      <relatedItems xmi:id="_QNmigl4NEeeW9pLVjNnxaQ" id="_1SsZcEMTEeaUSsVHy9CoDA" version="Latest" type="context"/>
       <relatedItems xmi:id="_QNmig14NEeeW9pLVjNnxaQ" id="_2p2fIEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
       <relatedItems xmi:id="_QNmihF4NEeeW9pLVjNnxaQ" id="_1Ke3cEVqEeaoOIXf89Zmgg" version="Latest" type="context"/>
       <relatedItems xmi:id="_QNmihV4NEeeW9pLVjNnxaQ" id="_x0cPYEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
@@ -145,6 +144,23 @@
       <relatedItems xmi:id="_QNmikV4NEeeW9pLVjNnxaQ" id="VimeoUtils" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9NqCsF44Eeeko_vzFfpTSg" id="TwitterUtils" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9NqCsV44Eeeko_vzFfpTSg" id="Tools" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_yQNioIhGEeenZKVU6_X76Q">
+      <baseItem xmi:id="_yQNioYhGEeenZKVU6_X76Q" id="_yOXIgIhGEeenZKVU6_X76Q" version="0.1" type="job"/>
+      <relatedItems xmi:id="_yQNio4hGEeenZKVU6_X76Q" id="_2p2fIEjxEeauV7pgj5yzDw" version="Latest" type="context"/>
+      <relatedItems xmi:id="_yQNipIhGEeenZKVU6_X76Q" id="_1Ke3cEVqEeaoOIXf89Zmgg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_yQNipohGEeenZKVU6_X76Q" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJsIhGEeenZKVU6_X76Q" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJsYhGEeenZKVU6_X76Q" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJsohGEeenZKVU6_X76Q" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJs4hGEeenZKVU6_X76Q" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJtIhGEeenZKVU6_X76Q" id="TwitterUtils" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJtYhGEeenZKVU6_X76Q" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJtohGEeenZKVU6_X76Q" id="Tools" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJt4hGEeenZKVU6_X76Q" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJuIhGEeenZKVU6_X76Q" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJuYhGEeenZKVU6_X76Q" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_yQOJuohGEeenZKVU6_X76Q" id="VimeoUtils" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_ty3RAECFEeaO_KqlSRwbvw" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ty3RAUCFEeaO_KqlSRwbvw" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

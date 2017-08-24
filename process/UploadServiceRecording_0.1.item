@@ -11,11 +11,7 @@
     <contextParameter comment="" name="smtpPassword" prompt="smtpPassword?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_Password" value="oU1cVFVm2EML8ZPVPNMtMXQnFzdTg6jmVzlwdphJy8tqNo+rS1aJgk27XVUg+MDg"/>
     <contextParameter comment="" name="woodmontVideoArchiveUrl" prompt="woodmontVideoArchiveUrl?" promptNeeded="false" repositoryContextId="_2p2fIEjxEeauV7pgj5yzDw" type="id_String" value="woodmont.org/media/watch"/>
     <contextParameter comment="" name="woodmontVideoArchiveDescription" prompt="woodmontVideoArchiveDescription?" promptNeeded="false" repositoryContextId="_2p2fIEjxEeauV7pgj5yzDw" type="id_String" value="Woodmont Hills Video Archive"/>
-    <contextParameter comment="" name="bufferTwitterProfileId" prompt="bufferTwitterProfileId?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="5784ff2f6d66a7197d3e0bf8"/>
-    <contextParameter comment="" name="bufferFBProfileId" prompt="bufferFBProfileId?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="5781239453eca54c2387209f"/>
-    <contextParameter comment="" name="bufferToken" prompt="bufferToken?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="1/e53abeb7a990aefaacd312fa143ff65e"/>
-    <contextParameter comment="" name="bufferUrl" prompt="bufferUrl?" promptNeeded="false" repositoryContextId="_x0cPYEjxEeauV7pgj5yzDw" type="id_String" value="https://api.bufferapp.com/1/updates/create.json?access_token="/>
-    <contextParameter comment="" name="vimeoWHChnnelName" prompt="vimeoWHChnnelName?" promptNeeded="false" type="id_String" value="Woodmont Hills Church Sermon Archive"/>
+    <contextParameter comment="" name="vimeoWHChnnelName" prompt="vimeoWHChnnelName?" promptNeeded="false" type="id_String" value="Woodmont Hills Church Video Archive"/>
     <contextParameter comment="" name="vimeoApiRoot" prompt="vimeoApiRoot?" promptNeeded="false" type="id_String" value="https://api.vimeo.com"/>
     <contextParameter comment="" name="vimeoReadToken" prompt="vimeoReadToken?" promptNeeded="false" type="id_String" value="94ca7078c6fa14dade1134e93e36f9f0"/>
     <contextParameter comment="" name="vimeoWriteToken" prompt="vimeoWriteToken?" promptNeeded="false" type="id_String" value="5d3064c48cafb5f05bd9700f06d38c8b"/>
@@ -317,7 +313,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="DateFormat dateFormat = new SimpleDateFormat(&quot;MM/dd/yyyy&quot;);&#xA;String dateMMDDYYY = dateFormat.format(input_row.service_date); &#xA;&#xA;output_row.service_name = input_row.service_name;&#xA;output_row.name = input_row.sermon_title;&#xA;output_row.description = dateMMDDYYY+ &quot; | &quot; + (Tools.isEmpty(input_row.sermon_series) ? &quot;&quot; : input_row.sermon_series + &quot; | &quot;) + input_row.speaker_name + &quot;\n&quot; + input_row.description;&#xA;//System.out.println(output_row.description );&#xA;globalMap.put(&quot;raw_description&quot;, input_row.description);&#xA;globalMap.put(&quot;raw_sermon_series&quot;, input_row.sermon_series);&#xA;&#xA;dateFormat = new SimpleDateFormat(&quot;MMddyy&quot;);&#xA;String datePart = dateFormat.format(input_row.service_date); &#xA;String timePart = &quot;Second Service&quot;.equals(input_row.service_name) ? &quot;2&quot; : &quot;1&quot;;&#xA;String fileName= datePart + &quot;_&quot; + timePart + &quot;_Sermon.mp4&quot;;&#xA;&#xA;output_row.file_name = fileName;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="DateFormat dateFormat = new SimpleDateFormat(&quot;MM/dd/yyyy&quot;);&#xA;String dateMMDDYYY = dateFormat.format(input_row.service_date); &#xA;&#xA;output_row.service_name = input_row.service_name;&#xA;output_row.name = input_row.sermon_title;&#xA;output_row.description = dateMMDDYYY+ &quot; | &quot; + (Tools.isEmpty(input_row.sermon_series) ? &quot;&quot; : input_row.sermon_series + &quot; | &quot;) + input_row.speaker_name + &quot;\n&quot; + input_row.description;&#xA;//System.out.println(output_row.description );&#xA;globalMap.put(&quot;raw_description&quot;, input_row.description);&#xA;globalMap.put(&quot;raw_sermon_series&quot;, input_row.sermon_series);&#xA;&#xA;dateFormat = new SimpleDateFormat(&quot;MMddyy&quot;);&#xA;String datePart = dateFormat.format(input_row.service_date); &#xA;String timePart = &quot;Second Service&quot;.equals(input_row.service_name) ? &quot;2&quot; : &quot;1&quot;;&#xA;String fileName= datePart + &quot;_&quot; + timePart + &quot;.mp4&quot;;&#xA;&#xA;output_row.file_name = fileName;&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.commons.io.FileUtils;&#xA;import java.io.File;&#xA;import java.text.DateFormat;&#xA;import java.text.SimpleDateFormat;"/>
     <elementParameter field="TEXT" name="LABEL" value="prepareUploadRequest"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -387,7 +383,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_yOXIgIhGEeenZKVU6_X76Q-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -648,7 +644,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_r_hEUD_mEeaKv6ZhswKsqw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_yOXIgIhGEeenZKVU6_X76Q-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -849,204 +845,6 @@
       <column comment="" key="false" length="-1" name="message" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_1" show="false"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" value="&quot;/Applications/Talend-OS-DI-V6.4.0/workspace/in.hash&quot;" show="false"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="successUp"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tHashInput_1">
-      <column comment="" key="false" length="-1" name="vimeoObj" nullable="false" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="videoEndPoint" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_2" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS">
-      <elementValue elementRef="INPUT_COLUMN" value="videoEndPoint"/>
-      <elementValue elementRef="FUNCTION" value=""/>
-      <elementValue elementRef="OPERATOR" value="!="/>
-      <elementValue elementRef="RVALUE" value="&quot;init&quot;"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="filterInit"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFilterRow_2">
-      <column comment="" key="false" length="-1" name="vimeoObj" nullable="false" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="videoEndPoint" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FILTER" name="FILTER">
-      <column comment="" key="false" length="-1" name="vimeoObj" nullable="false" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="videoEndPoint" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="vimeoObj" nullable="false" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="videoEndPoint" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="Vimeo vimeo = (Vimeo)input_row.vimeoObj;&#xA;String videoEndPoint = input_row.videoEndPoint;&#xA;        &#xA;//get video info until pic info available&#xA;VimeoResponse info = null;&#xA;boolean hasPic = false;&#xA;org.json.JSONObject pictures = null;&#xA;while(!hasPic){&#xA;&#x9;System.out.println(&quot;Attempting to get thumbnail pic for: &quot; + videoEndPoint);&#xA;&#x9;Thread.sleep(60000);&#xA;&#x9;info = vimeo.getVideoInfo(videoEndPoint);&#xA;&#x9;if (info.getStatusCode() >= 300){&#xA;&#x9;&#x9;throw new Exception(info.getStatusCode() + &quot; - &quot; + info.getJson());&#xA;&#x9;}&#xA;&#x9;//if pictures is null then hasPic remains false and try again; othewise pictures cannot be retrieved as JSON Object so catch exception and assume there are not pictures&#xA;&#x9;try {&#xA;&#x9;&#x9;pictures = info.getJson().optJSONObject(&quot;pictures&quot;);&#xA;&#x9;&#x9;hasPic = (pictures != null);&#xA;&#x9;} catch (Exception e){&#xA;&#x9;&#x9;hasPic = false;&#xA;&#x9;}&#xA;} &#xA;&#xA;org.json.JSONArray sizes = pictures.getJSONArray(&quot;sizes&quot;);&#xA;String thumbNailUrl = sizes.getJSONObject(0).getString(&quot;link&quot;);&#xA;for (int i=0; i&lt;sizes.length(); i++){&#xA;&#x9;if (sizes.getJSONObject(i).getInt(&quot;width&quot;) > 600 &amp;&amp; sizes.getJSONObject(i).getInt(&quot;width&quot;) &lt; 700){&#xA;&#x9;&#x9;output_row.thumbNailUrl = sizes.getJSONObject(i).getString(&quot;link&quot;);&#xA;&#x9;&#x9;break;&#xA;&#x9;}&#xA;}&#xA;&#xA;output_row.thumbNailUrl = thumbNailUrl;&#xA;output_row.name = info.getJson().getString(&quot;name&quot;);"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.clickntap.vimeo.*;&#xA;import java.io.File;&#xA;import java.util.HashMap;&#xA;import java.util.Map;&#xA;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.HttpClient;&#xA;import org.apache.http.client.methods.HttpGet;&#xA;import org.apache.http.impl.client.HttpClientBuilder;"/>
-    <elementParameter field="TEXT" name="LABEL" value="getVideoInfo"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_2">
-      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="thumbNailUrl" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
-    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
-    <elementParameter field="TABLE" name="MAP" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFlowToIterate_2"/>
-  </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_5" show="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;resp.name&quot;)"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="thumbNailUrl"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;resp.thumbNailUrl&quot;)"/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFixedFlowInput_5">
-      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="thumbNailUrl" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_5" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value=" &#xA;MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addTextBody(&quot;text&quot;, &quot;Our latest sermon '&quot; + input_row.name + &quot;' is now available.&quot;);&#xA;builder.addTextBody(&quot;profile_ids[]&quot;, context.bufferTwitterProfileId);&#xA;builder.addTextBody(&quot;media[link]&quot;, context.woodmontVideoArchiveUrl);&#xA;builder.addTextBody(&quot;media[description]&quot;, context.woodmontVideoArchiveDescription);&#xA;builder.addTextBody(&quot;media[photo]&quot;, input_row.thumbNailUrl.replace(&quot;200x120&quot;,&quot;600x400&quot;));&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost(context.bufferUrl + context.bufferToken);&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.HttpEntity;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.methods.HttpPost;&#xA;import org.apache.http.entity.ContentType;&#xA;import org.apache.http.entity.mime.MultipartEntityBuilder;&#xA;import org.apache.http.impl.client.DefaultHttpClient;&#xA;&#xA;import java.io.InputStreamReader;&#xA;import java.io.BufferedReader;&#xA;&#xA;"/>
-    <elementParameter field="TEXT" name="LABEL" value="bufferTwitter"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_5">
-      <column comment="" key="false" length="-1" name="response" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="864">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_4" show="false"/>
-    <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
-    <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
-    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
-    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;sender&quot;" show="false"/>
-    <elementParameter field="TEXT" name="CC" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="BCC" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Success: &quot; + jobName + &quot; - Buffer Twitter Update&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="row11.response_code + &quot;\n&quot; + row11.response"/>
-    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
-    <elementParameter field="TABLE" name="ATTACHMENTS"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="context.smtpHost"/>
-    <elementParameter field="TEXT" name="SMTP_PORT" value="context.smtpPort"/>
-    <elementParameter field="CHECK" name="SSL" value="false"/>
-    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.smtpUsername"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kuet7XG8Ivn/12VEzySvltZZ"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="plain"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
-    <elementParameter field="TEXT" name="LOCALHOST" value="&quot;localhost&quot;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="sendEmail"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSendMail_4">
-      <column comment="" key="false" length="-1" name="response" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="960">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_7" show="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;resp.name&quot;)"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="thumbNailUrl"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;resp.thumbNailUrl&quot;)"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="description"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;raw_description&quot;)"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sermonSeries"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;raw_sermon_series&quot;)"/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFixedFlowInput_7">
-      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="thumbNailUrl" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="description" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sermonSeries" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="960">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_6" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="MultipartEntityBuilder builder = MultipartEntityBuilder.create();&#xA;builder.addTextBody(&quot;text&quot;, &quot;We invite you to watch our latest sermon &quot; + ( (Tools.isEmpty(input_row.sermonSeries) ? &quot;&quot; : &quot;from the sermon series &quot; + input_row.sermonSeries) ) +&quot; now available in the &quot; + context.woodmontVideoArchiveDescription + &quot; entitled &quot; + input_row.name + (Tools.isEmpty(input_row.description) ? &quot;&quot; : &quot; - &quot; + input_row.description) );&#xA;builder.addTextBody(&quot;profile_ids[]&quot;, context.bufferFBProfileId);&#xA;builder.addTextBody(&quot;media[link]&quot;, context.woodmontVideoArchiveUrl);&#xA;builder.addTextBody(&quot;media[description]&quot;, context.woodmontVideoArchiveDescription);&#xA;builder.addTextBody(&quot;media[picture]&quot;, input_row.thumbNailUrl.replace(&quot;200x120&quot;,&quot;600x400&quot;));&#xA;&#xA;DefaultHttpClient client = new DefaultHttpClient();&#xA;HttpPost httpPost = new HttpPost(context.bufferUrl + context.bufferToken);&#xA;HttpEntity multipart = builder.build();&#xA;httpPost.setEntity(multipart);&#xA;HttpResponse response = client.execute(httpPost);&#xA;&#xA;BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));&#xA;StringBuffer result = new StringBuffer();&#xA;String line = &quot;&quot;;&#xA;while ((line = rd.readLine()) != null) {&#xA;&#x9;result.append(line);&#xA;}&#xA;&#xA;output_row.response = result.toString();&#xA;output_row.response_code = response.getStatusLine().getStatusCode();&#xA;&#xA;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.apache.http.HttpEntity;&#xA;import org.apache.http.HttpResponse;&#xA;import org.apache.http.client.methods.HttpPost;&#xA;import org.apache.http.entity.ContentType;&#xA;import org.apache.http.entity.mime.MultipartEntityBuilder;&#xA;import org.apache.http.impl.client.DefaultHttpClient;&#xA;&#xA;import java.io.InputStreamReader;&#xA;import java.io.BufferedReader;&#xA;&#xA;"/>
-    <elementParameter field="TEXT" name="LABEL" value="bufferFB"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_6">
-      <column comment="" key="false" length="-1" name="response" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="960">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_5" show="false"/>
-    <elementParameter field="TEXT" name="TO" value="context.emailRecipients"/>
-    <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
-    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
-    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;sender&quot;" show="false"/>
-    <elementParameter field="TEXT" name="CC" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="BCC" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Success: &quot; + jobName + &quot; - Buffer Facebook Update&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="row14.response_code + &quot;\n&quot; + row14.response"/>
-    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
-    <elementParameter field="TABLE" name="ATTACHMENTS"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="context.smtpHost"/>
-    <elementParameter field="TEXT" name="SMTP_PORT" value="context.smtpPort"/>
-    <elementParameter field="CHECK" name="SSL" value="false"/>
-    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.smtpUsername"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kuet7XG8Ivn/12VEzySvltZZ"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="plain"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
-    <elementParameter field="TEXT" name="LOCALHOST" value="&quot;localhost&quot;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="sendEmail"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSendMail_5">
-      <column comment="" key="false" length="-1" name="response" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="response_code" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_4" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
@@ -1219,63 +1017,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tHashInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tFilterRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12" show="false"/>
-  </connection>
-  <connection connectorName="FILTER" label="row15" lineStyle="0" metaname="tFilterRow_2" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_2" target="tJavaRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="resp" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tFlowToIterate_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="resp" show="false"/>
-  </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFlowToIterate_2" target="tFixedFlowInput_5">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4" show="false"/>
-  </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFlowToIterate_2" target="tFixedFlowInput_7">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate7" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="tJavaRow_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="thumbNailUrl"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tJavaRow_5" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_5" target="tSendMail_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tFixedFlowInput_7" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_7" target="tJavaRow_6">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="thumbNailUrl"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="description"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="sermonSeries"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tJavaRow_6" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_6" target="tSendMail_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
-  </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tHashOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
@@ -1346,13 +1087,6 @@
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashInput_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Other Updates: Twitter and Facebook via Buffer"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
