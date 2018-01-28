@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="emailRecipients" prompt="emailRecipients?" promptNeeded="false" type="id_String" value="jbrown@woodmont.org,asteele@woodmont.org,Earl.Lavender@lipscomb.edu,rob.mcray@gmail.com"/>
+    <contextParameter comment="" name="emailRecipients" prompt="emailRecipients?" promptNeeded="false" type="id_String" value="jbrown@woodmont.org,Earl.Lavender@lipscomb.edu"/>
     <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="whcav@icloud.com"/>
     <contextParameter comment="" name="emailCCRecipients" prompt="emailCCRecipients?" promptNeeded="false" type="id_String" value="chris.thebeaz.beasley@gmail.com,jsullivan@woodmont.org"/>
     <contextParameter comment="" name="smtpHost" prompt="smtpHost?" promptNeeded="false" repositoryContextId="_1Ke3cEVqEeaoOIXf89Zmgg" type="id_String" value="email-smtp.us-east-1.amazonaws.com"/>
@@ -111,6 +111,7 @@
     <routinesParameter id="_t2S_gECFEeaO_KqlSRwbvw" name="TalendDataGenerator"/>
     <routinesParameter id="_t2U0sECFEeaO_KqlSRwbvw" name="TalendDate"/>
     <routinesParameter id="_t2Wp4ECFEeaO_KqlSRwbvw" name="TalendString"/>
+    <routinesParameter id="_xnsYUF2MEeeU5Kvghke4qQ" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_1" show="false"/>
