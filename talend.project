@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_twCmgUCFEeaO_KqlSRwbvw" label="Woodmont" description="" language="java" technicalLabel="WOODMONT" local="true" author="_tw-aoECFEeaO_KqlSRwbvw" productVersion="Talend Open Studio for Data Integration-6.4.0.20170510_1410" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_twCmgUCFEeaO_KqlSRwbvw" label="Woodmont" description="" language="java" technicalLabel="WOODMONT" local="true" author="_tw-aoECFEeaO_KqlSRwbvw" productVersion="Talend Open Studio for Data Integration-6.4.1.20170623_1246" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_t0jTEECFEeaO_KqlSRwbvw" label="development" code="DEV"/>
     <technicalStatus xmi:id="_t0jTEUCFEeaO_KqlSRwbvw" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_t0jTEkCFEeaO_KqlSRwbvw" label="production" code="PROD"/>
